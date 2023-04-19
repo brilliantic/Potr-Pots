@@ -104,8 +104,6 @@ body {
         margin-left: 82px;
     }
 
-    &__info-bay {}
-
     &__vertical-text {
         position: absolute;
         transform: rotate(90deg);
@@ -328,17 +326,16 @@ body {
             top: 18%;
             left: -21.5%;
         }
+
         .product__line-first {
-            margin-right: 40px;
             top: 15%;
             left: -21.5%;
         }
+
         .product__line-second {
-            // margin-right: 40px;
             top: 73%;
             left: 53%;
         }
-
     }
 
     &__img {
@@ -369,8 +366,42 @@ body {
         color: #4F4F4F;
         margin-top: 10px;
     }
-
-    &__col-text {}
 }
 
-.bebas-neue {}
+.product {
+
+    &__block {
+        margin-top: 46px;
+
+    }
+
+    &__vertical-text {}
+
+    &__col-second {
+        margin: 105px 0 0 100px;
+
+    }
+
+    &__img {
+        // max-width: 470px;
+        // height: 670px;
+
+    }
+
+    &__title-star {
+        margin-top: 45px;
+    }
+
+    &__title {
+        width: 400px;
+    }
+
+    &__col-text {
+        margin-top: 10px;
+        width: 370px;
+    }
+
+    &__col-third {
+        margin-left: 120px;
+    }
+}

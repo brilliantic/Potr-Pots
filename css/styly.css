@@ -423,7 +423,6 @@ body {
   left: -21.5%;
 }
 .product__title .product__line-first {
-  margin-right: 40px;
   top: 15%;
   left: -21.5%;
 }
@@ -454,4 +453,24 @@ body {
   line-height: 150%;
   color: #4F4F4F;
   margin-top: 10px;
+}
+
+.product__block {
+  margin-top: 46px;
+}
+.product__col-second {
+  margin: 105px 0 0 100px;
+}
+.product__title-star {
+  margin-top: 45px;
+}
+.product__title {
+  width: 400px;
+}
+.product__col-text {
+  margin-top: 10px;
+  width: 370px;
+}
+.product__col-third {
+  margin-left: 120px;
 }

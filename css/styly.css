@@ -1,0 +1,329 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800);
+@import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-style: 100%;
+  line-height: 1;
+  font-style: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: inherit;
+  font-weight: 400;
+}
+
+:root {
+  /* Оголошення змінної зі значенням кольору */
+  --my_Turquoise: #03839E;
+  --my_Yellow: #FFE339;
+  --my_Yellow-light: #FFEC7A;
+  --my_Grey: #B3B3B3;
+  --my_Grey-light: #F8F8F8;
+  --my_Red: #EB5757;
+}
+
+.bebas-neue {
+  font-family: "Bebas Neue", cursive;
+}
+
+.manrope {
+  font-family: "Manrope";
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Manrope";
+}
+
+.wrapper {
+  width: 1440px;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.navbar {
+  margin-top: 20px;
+}
+.navbar__logo {
+  font-size: 2.25rem;
+  line-height: 2.6875rem;
+  letter-spacing: 0.06em;
+  color: #333333;
+}
+.navbar__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navbar__list {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.navbar__item a {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: #4F4F4F;
+  margin: 0 30px;
+}
+.navbar__cart {
+  max-width: 1.875rem;
+}
+
+.top-img-absolute img {
+  position: absolute;
+  width: 1035px;
+  height: 466px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.top {
+  position: relative;
+}
+.top__info {
+  margin: 80px 0 0 0;
+}
+.top__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 82px;
+}
+.top__vertical-text {
+  position: absolute;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--my_Turquoise);
+  position: absolute;
+  left: 35px;
+  top: 510px;
+}
+.top__vertical-text span {
+  position: absolute;
+  width: 44px;
+  height: 1px;
+  background-color: var(--my_Turquoise);
+  top: 50%;
+  left: 110%;
+}
+.top__vertical-text::before, .top__vertical-text::after {
+  position: absolute;
+  width: 12px;
+  height: 1px;
+  background-color: var(--my_Turquoise);
+  left: 136%;
+}
+.top__vertical-text::before {
+  content: "";
+  rotate: 45deg;
+  bottom: 73%;
+  top: 29%;
+}
+.top__vertical-text:after {
+  content: "";
+  rotate: -45deg;
+  bottom: 27%;
+  top: 71%;
+}
+.top__title {
+  font-family: "Bebas Neue";
+  width: 470px;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 64px;
+  letter-spacing: 0.155em;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--my_Turquoise);
+}
+.top__title .top__visible-text {
+  -webkit-text-fill-color: var(--my_Turquoise);
+}
+.top__wrap-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 20px;
+}
+.top__block-price {
+  width: 139px;
+  margin-right: 32px;
+}
+.top__price {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #333333;
+}
+.top__ofer {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #4F4F4F;
+}
+.top__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 50px;
+}
+.top__btn-item {
+  position: relative;
+  height: 48px;
+  width: 270px;
+  background-color: var(--my_Yellow);
+  color: #121212;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  text-align: left;
+  padding-left: 81px;
+}
+.top__btn-item span {
+  position: absolute;
+  width: 28px;
+  height: 1px;
+  background-color: #000;
+  top: 50%;
+  left: 60%;
+}
+.top__btn-item span::before, .top__btn-item span::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 1px;
+  background-color: #000;
+  left: 77%;
+}
+.top__btn-item span::before {
+  rotate: 45deg;
+  top: -2.5px;
+}
+.top__btn-item span:after {
+  rotate: -45deg;
+  top: 2.5px;
+}
+.top__img img {
+  width: 500px;
+  height: 500px;
+}

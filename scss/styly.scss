@@ -41,8 +41,10 @@ body {
     }
 
     &__list {
-        width: 60%;
+        width: 475px;
         display: flex;
+        justify-content: space-between;
+
     }
 
     &__item {
@@ -51,7 +53,25 @@ body {
             font-weight: 400;
             line-height: 1.5rem;
             color: #4F4F4F;
-            margin: 0 30px;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                background-color: #111;
+                height: .0625rem;
+                transition: all .3s;
+                transform: scale(0);
+            }
+
+            &:hover::after {
+                transform: scale(1.2);
+            }
+
+            &:active {
+                transition: all .3s;
+                transform: scale(1.2);
+            }
         }
     }
 
@@ -95,7 +115,7 @@ body {
         color: var(--my_Turquoise);
 
         position: absolute;
-        left: 35px;
+        left: 65px;
         top: 510px;
 
         //тіре
@@ -145,7 +165,7 @@ body {
         -webkit-text-fill-color: transparent; // прозорий текст
         -webkit-text-stroke: 1px var(--my_Turquoise); // бордер текста
 
-        .top__visible-text {
+        span {
             -webkit-text-fill-color: var(--my_Turquoise);
         }
     }
@@ -181,7 +201,6 @@ body {
         display: flex;
         justify-content: flex-end;
         margin-top: 50px;
-
     }
 
     &__btn-item {
@@ -229,6 +248,10 @@ body {
                 top: 2.5px;
             }
         }
+
+        &:hover {
+            background-color: var(--my_Yellow-light);
+        }
     }
 
     &__img {
@@ -238,3 +261,116 @@ body {
         }
     }
 }
+
+.products {
+    margin: 150px 0 0 0;
+}
+
+.product {
+
+    &__block {
+        position: relative;
+        display: flex;
+    }
+
+    &__vertical-text {
+        font-family: "Bebas Neue";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0.22em;
+        color: #828282;
+
+        transform: rotate(90deg);
+        position: absolute;
+        right: -2%;
+        top: 17%;
+
+        //тіре
+        span {
+            position: absolute;
+            width: 65px;
+            height: 1px;
+            background-color: #828282;
+            top: 50%;
+            left: -120%;
+        }
+    }
+
+    &__col {
+        margin-right: 200px;
+    }
+
+    &__title {
+        position: relative;
+        font-family: "Bebas Neue";
+        width: 470px;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.155em;
+        color: #000;
+        margin-top: 40px;
+
+        span {
+            position: absolute;
+            left: -14.5%;
+        }
+
+        .product__line-first,
+        .product__line-second {
+            display: inline-block;
+            width: 45px;
+            height: 1px;
+            background-color: #333333;
+            transform: rotate(-72deg);
+            margin-right: 40px;
+            top: 18%;
+            left: -21.5%;
+        }
+        .product__line-first {
+            margin-right: 40px;
+            top: 15%;
+            left: -21.5%;
+        }
+        .product__line-second {
+            // margin-right: 40px;
+            top: 73%;
+            left: 53%;
+        }
+
+    }
+
+    &__img {
+        margin-top: 34px;
+
+    }
+
+    &__title-star {
+        position: relative;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #333333;
+        margin-top: 208px;
+
+        span {
+            position: absolute;
+            top: 15%;
+            left: -6.5%;
+        }
+    }
+
+    &__text {
+        width: 370px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        color: #4F4F4F;
+        margin-top: 10px;
+    }
+
+    &__col-text {}
+}
+
+.bebas-neue {}

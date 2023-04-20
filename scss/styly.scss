@@ -19,6 +19,10 @@ body {
     flex: 1 1 auto;
 }
 
+.footer {
+    height: 100px;
+}
+
 .container {
     width: 1170px;
     margin: 0 auto;
@@ -308,33 +312,54 @@ body {
         line-height: 150%;
         letter-spacing: 0.155em;
         color: #000;
-        margin-top: 40px;
 
         span {
             position: absolute;
             left: -14.5%;
         }
 
-        .product__line-first,
-        .product__line-second {
+        .product__1-first,
+        .product__1-second,
+        .product__2-first,
+        .product__2-second,
+        .product__3-first,
+        .product__3-second {
             display: inline-block;
             width: 45px;
             height: 1px;
             background-color: #333333;
             transform: rotate(-72deg);
             margin-right: 40px;
-            top: 18%;
-            left: -21.5%;
         }
 
-        .product__line-first {
+        .product__1-first {
             top: 15%;
             left: -21.5%;
         }
 
-        .product__line-second {
+        .product__1-second {
             top: 73%;
-            left: 53%;
+            left: 62%;
+        }
+
+        .product__2-first {
+            top: -55%;
+            left: -2%;
+        }
+
+        .product__2-second {
+            top: 73%;
+            left: 58%;
+        }
+
+        .product__3-first {
+            top: 7%;
+            left: -22%;
+        }
+
+        .product__3-second {
+            top: 85%;
+            left: 25%;
         }
     }
 
@@ -349,7 +374,7 @@ body {
         font-weight: 400;
         line-height: 24px;
         color: #333333;
-        margin-top: 208px;
+        margin: 208px 0 40px;
 
         span {
             position: absolute;
@@ -375,33 +400,90 @@ body {
 
     }
 
-    &__vertical-text {}
+    &__vertical-text-second {
+        font-family: "Bebas Neue";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        letter-spacing: 0.22em;
+        color: #828282;
+
+        transform: rotate(-90deg);
+        position: absolute;
+        left: 0;
+        top: 90%;
+
+        //тіре
+        span {
+            position: absolute;
+            width: 65px;
+            height: 1px;
+            background-color: #828282;
+            top: 50%;
+            left: -120%;
+        }
+    }
 
     &__col-second {
         margin: 105px 0 0 100px;
 
     }
 
-    &__img {
-        // max-width: 470px;
-        // height: 670px;
+    &__img {}
 
+    &__title-star-second {
+        margin: 45px 0 0 0px;
+        flex: 0 1 100%;
+        position: relative;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #333333;
+
+        span {
+            position: absolute;
+            top: 15%;
+            left: -6.5%;
+        }
     }
 
-    &__title-star {
-        margin-top: 45px;
-    }
+
 
     &__title {
+        position: relative;
         width: 400px;
+
+        .title__second {
+            position: absolute;
+            width: 65px;
+            height: 1px;
+            // background-color: #828282;
+            top: -75px;
+            left: 5%;
+        }
     }
 
     &__col-text {
         margin-top: 10px;
         width: 370px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: #4F4F4F;
     }
 
     &__col-third {
         margin-left: 120px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
     }
+
+    &__text-info {
+        margin-top: 40px;
+    }
+}
+
+.title-second {
+    margin-top: 113px;
 }

@@ -56,7 +56,7 @@ body {
             font-size: 1rem;
             font-weight: 400;
             line-height: 1.5rem;
-            color: #4F4F4F;
+            color: var(--my_Grey-text-p);
 
             &::after {
                 content: '';
@@ -196,7 +196,7 @@ body {
         font-weight: 400;
         line-height: 21px;
         text-align: left;
-        color: #4F4F4F;
+        color: var(--my_Grey-text-p);
     }
 
     &__btn {
@@ -365,7 +365,6 @@ body {
 
     &__img {
         margin-top: 34px;
-
     }
 
     &__title-star {
@@ -388,16 +387,14 @@ body {
         font-size: 16px;
         font-weight: 400;
         line-height: 150%;
-        color: #4F4F4F;
+        color: var(--my_Grey-text-p);
         margin-top: 10px;
     }
 }
 
 .product {
-
     &__block {
         margin-top: 46px;
-
     }
 
     &__vertical-text-second {
@@ -410,7 +407,7 @@ body {
 
         transform: rotate(-90deg);
         position: absolute;
-        left: 0;
+        left: -2.2%;
         top: 90%;
 
         //тіре
@@ -426,10 +423,22 @@ body {
 
     &__col-second {
         margin: 105px 0 0 100px;
-
     }
 
-    &__img {}
+    &__img-1 {
+        width: 500px;
+        height: 500px;
+    }
+
+    &__img-2 {
+        width: 300px;
+        height: 417px;
+    }
+
+    &__img-3 {
+        width: 470px;
+        height: 670px;
+    }
 
     &__title-star-second {
         margin: 45px 0 0 0px;
@@ -469,7 +478,7 @@ body {
         font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        color: #4F4F4F;
+        color: var(--my_Grey-text-p);
     }
 
     &__col-third {
@@ -487,3 +496,62 @@ body {
 .title-second {
     margin-top: 113px;
 }
+
+/* block 3 img */
+.features {
+    margin-top: 150px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 71px;
+    }
+
+    &__title {
+        font-family: "Bebas Neue";
+        font-size: 58px;
+        font-weight: 400;
+        line-height: 70px;
+        letter-spacing: 0.155em;
+        color: var(--my_Turquoise);
+
+        span {
+            -webkit-text-fill-color: transparent; // прозорий текст
+            -webkit-text-stroke: 1px var(--my_Turquoise); // бордер текста
+        }
+    }
+
+    &__block {
+        width: 370px;
+
+    }
+
+    &__block-img {
+        max-width: 430px;
+    }
+
+    &__block-title {
+        font-family: "Bebas Neue";
+        text-align: center;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.155em;
+        margin-top: 17px;
+        color: #333333;
+    }
+
+    &__block-text {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        margin-top: 20px;
+        color: var(--my_Grey-text-p);
+    }
+}
+/* //block 3 img */
+
+/* team! */
+
+/* //team! */

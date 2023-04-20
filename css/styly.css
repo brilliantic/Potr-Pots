@@ -96,6 +96,7 @@ h6 {
   --my_Yellow-light: #FFEC7A;
   --my_Grey: #B3B3B3;
   --my_Grey-light: #F8F8F8;
+  --my_Grey-text-p: #4f4f4f;
   --my_Red: #EB5757;
 }
 
@@ -173,7 +174,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
-  color: #4F4F4F;
+  color: var(--my_Grey-text-p);
 }
 .navbar__item a::after {
   content: "";
@@ -308,7 +309,7 @@ body {
   font-weight: 400;
   line-height: 21px;
   text-align: left;
-  color: #4F4F4F;
+  color: var(--my_Grey-text-p);
 }
 .top__btn {
   display: -webkit-box;
@@ -472,7 +473,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
-  color: #4F4F4F;
+  color: var(--my_Grey-text-p);
   margin-top: 10px;
 }
 
@@ -490,7 +491,7 @@ body {
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
   position: absolute;
-  left: 0;
+  left: -2.2%;
   top: 90%;
 }
 .product__vertical-text-second span {
@@ -503,6 +504,18 @@ body {
 }
 .product__col-second {
   margin: 105px 0 0 100px;
+}
+.product__img-1 {
+  width: 500px;
+  height: 500px;
+}
+.product__img-2 {
+  width: 300px;
+  height: 417px;
+}
+.product__img-3 {
+  width: 470px;
+  height: 670px;
 }
 .product__title-star-second {
   margin: 45px 0 0 0px;
@@ -537,7 +550,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  color: #4F4F4F;
+  color: var(--my_Grey-text-p);
 }
 .product__col-third {
   margin-left: 120px;
@@ -557,3 +570,57 @@ body {
 .title-second {
   margin-top: 113px;
 }
+
+/* block 3 img */
+.features {
+  margin-top: 150px;
+}
+.features__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 71px;
+}
+.features__title {
+  font-family: "Bebas Neue";
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 70px;
+  letter-spacing: 0.155em;
+  color: var(--my_Turquoise);
+}
+.features__title span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--my_Turquoise);
+}
+.features__block {
+  width: 370px;
+}
+.features__block-img {
+  max-width: 430px;
+}
+.features__block-title {
+  font-family: "Bebas Neue";
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.155em;
+  margin-top: 17px;
+  color: #333333;
+}
+.features__block-text {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 20px;
+  color: var(--my_Grey-text-p);
+}
+
+/* //block 3 img */
+/* team! */
+/* //team! */

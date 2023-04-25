@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Port Pots</title>
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
-
     <link rel="stylesheet" href="css/styly.css">
 </head>
 
@@ -19,26 +16,39 @@
 
         <!-- /* header = вид всього першого екрану */ -->
         <header class="header">
-            <div class="top-img-absolute">
-                <img src="img/Rectangle_yellow-rectangle.png" alt="yellow-rectangle"></img>
-            </div>
-
             <div class="container">
-                <section class="navbar">
-                    <div class="navbar__content">
-                        <a href="#" class="navbar__logo bebas-neue">POTR POTS</a>
-                        <ul class="navbar__list">
-                            <li class="navbar__item"><a href="#">Features</a></li>
-                            <li class="navbar__item"><a href="#">About us</a></li>
-                            <li class="navbar__item"><a href="#">Materials</a></li>
-                            <li class="navbar__item"><a href="#">Message us</a></li>
+
+                <section class="header__body">
+                    <a href="#" class="header__logo bebas-neue">POTR POTS</a>
+                    <div class="header__burger">
+                        <span></span>
+                    </div>
+                    <nav class="header__menu">
+                        <ul class="header__list">
+                            <li class="header__link header__link-cart"><a href="#">Basket</a></li>
+                            <li class="header__link"><a href="#">Features</a></li>
+                            <li class="header__link"><a href="#">About us</a></li>
+                            <li class="header__link"><a href="#">Materials</a></li>
+                            <li class="header__link"><a href="#">Message us</a></li>
                         </ul>
-                        <div class="navbar__cart">
-                            <a href="#"><img src="img/SVG/navbar_cart.png" alt="cart"></a>
-                        </div>
+                    </nav>
+                    <div class="header__cart">
+                        <a href="#"><img src="img/SVG/navbar_cart.png" alt="cart"></a>
                     </div>
                 </section>
 
+
+            </div>
+        </header>
+        <!-- /* header = вид всього першого екрану */ -->
+
+
+
+        <main class="main">
+            <div class="container">
+                <div class="top-img-absolute">
+                    <img src="img/Rectangle_yellow-rectangle.png" alt="yellow-rectangle"></img>
+                </div>
                 <section class="top__info">
                     <div class="top__block">
                         <div class="top__info-bay">
@@ -61,12 +71,6 @@
                         </div>
                     </div>
                 </section>
-            </div>
-        </header>
-        <!-- /* header = вид всього першого екрану */ -->
-
-        <main class="main">
-            <div class="container">
 
                 <!-- /* products */ -->
                 <section class="products">
@@ -91,12 +95,14 @@
                             <div class="product__vertical-text-second"><span></span>potr pots</div>
                             <img class="product__img-2" src="img/Rectangle_3.png" alt="Robust pot"></img>
                             <h3 class="product__title-star-second"><span>*</span>Beautiful</h3>
-                            <h2 class="product__title title-second bebas-neue"><span
-                                    class="product__2-first"></span><span class="title__second">2</span>For
-                                those who love
-                                modern design<span class="product__2-second"></span></h2>
+                            <h2 class="product__title title-second bebas-neue">
+                                <span class="product__2-first"></span><span class="title__second">2</span>
+                                For those who love modern design
+                                <span class="product__2-second"></span>
+                            </h2>
                             <p class="product__col-text">We strived to achieve something that would look beautiful in
-                                your home while being incredibly functional and intuitive to use.</p>
+                                your home while being incredibly functional and intuitive to use.
+                            </p>
                         </div>
 
                         <div class="product__col-third">
@@ -105,15 +111,14 @@
                                 <h3 class="product__title-star-second"><span>*</span>Saves time</h3>
                             </div>
                             <div class="product__text-info">
-                                <h2 class="product__title bebas-neue"><span class="product__3-first"></span><span
-                                        class="title__third">3</span>For those who
-                                    don't have enough time to regular water indoor plants<span
-                                        class="product__3-second"></span>
+                                <h2 class="product__title bebas-neue"><span class="product__3-first"></span>
+                                    <span class="title__third">3</span>
+                                    For those who don't have enough time to regular water indoor plants
+                                    <span class="product__3-second"></span>
                                 </h2>
                                 <p class="product__col-text">Water is drawn up through the cotton by the plant using
-                                    tried
-                                    and tested wicking technology. It’s particularly useful
-                                    if you aren’t able to water them yourself on a regular basis!
+                                    tried and tested wicking technology. It’s particularly useful if you aren’t able
+                                    to water them yourself on a regular basis!
                                 </p>
                             </div>
                         </div>
@@ -193,13 +198,44 @@
                             UK.
                         </p>
                     </div>
-                    <span class="special__plus"></span>
+                    <p class="special__wrapper">
+                        <span class="special__plus-1">+</span>
+                        <span class="special__plus-2">+</span>
+                        <span class="special__plus-3">+</span>
+                        <span class="special__plus-4">+</span>
+                        <span class="special__plus-5">+</span>
+                    </p>
+
+                    <div class="special__block-1" id="block-1">
+                        <p>POTR Pots are constructed using recycled polypropylene which can be fully recycled.</p>
+                    </div>
+                    <div class="special__block-2" id="block-2">
+                        <p>POTR pots are flat pack, origami planters designed to self-water your plants, made from
+                            recycled materials.</p>
+                    </div>
+                    <div class="special__block-3" id="block-3">
+                        <p>Once assembled the cotton cord doubles as the watering system, allowing your plants to
+                            self-regulate their water intake
+                            using tried and tested wicking technology.</p>
+                    </div>
+                    <div class="special__block-4" id="block-4">
+                        <p>Shipped flat packed so they can be slipped through your letterbox, POTR Pots have the
+                            smallest carbon footprint possible
+                            during transit.</p>
+                    </div>
+                    <div class="special__block-5" id="block-5">
+                        <p>We have chosen Bobbiny recycled cotton cord to use as our draw string and wicking cord. Not
+                            only is it 100% recycled, it
+                            looks great and works really well at wicking water.</p>
+                    </div>
                 </div>
             </section>
             <!-- /* Materials and Features */ -->
 
 
         </main>
+
+
 
         <footer class="footer">
             <div class="container">
@@ -228,9 +264,8 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

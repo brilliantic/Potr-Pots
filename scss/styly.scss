@@ -14,7 +14,7 @@ body {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #f8f8f8;
+    // background-color: #f8f8f8;
 }
 
 .main {
@@ -26,8 +26,15 @@ body {
     margin: 0 auto;
 }
 
-.navbar {
+.header {
+    width: 100%;
     margin-top: 20px;
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     &__logo {
         font-size: 2.25rem;
@@ -36,7 +43,7 @@ body {
         color: #333333;
     }
 
-    &__content {
+    &__menu {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -48,7 +55,12 @@ body {
         justify-content: space-between;
     }
 
-    &__item {
+    &__link-cart {
+        display: none;
+    }
+
+    &__link {
+
         a {
             font-size: 1rem;
             font-weight: 400;
@@ -80,6 +92,119 @@ body {
         max-width: 1.875rem;
     }
 }
+
+.header {
+
+    &__burger {
+        display: none;
+    }
+
+    @media (max-width: 767px) {
+        body.lock {
+            overflow: hidden;
+        }
+
+        .header__body {
+            width: 100%;
+        }
+
+        &__burger {
+            display: flex;
+            position: relative;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            z-index: 3;
+            right: 0;
+            top: 0;
+        }
+
+        span {
+            position: absolute;
+            background-color: #000000;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            top: 8.5px;
+            transition: all 0.3s ease 0s;
+        }
+
+        &__burger:before,
+        &__burger:after {
+            content: '';
+            background-color: #000000;
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            left: 0;
+            transition: all 0.3s ease 0s;
+        }
+
+        &__burger:before {
+            top: 0;
+        }
+
+        &__burger::after {
+            bottom: 0;
+        }
+
+        &__burger.active::before {
+            transform: rotate(45deg);
+            top: 8.5px;
+        }
+
+        &__burger.active::after {
+            transform: rotate(-45deg);
+            bottom: 8.5px;
+        }
+
+        &__burger.active span {
+            transform: scale(0);
+        }
+
+        &__menu {
+            position: fixed;
+            top: -100%;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            overflow: auto;
+            transition: all 0.3s ease 0s;
+            background-color: #03839E;
+            z-index: 2;
+        }
+
+        &__list {
+            width: 180px;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+        }
+
+        &__link-cart {
+            display: block;
+        }
+
+        &__link {
+            a {
+                display: inline-block;
+                font-size: 2rem;
+                line-height: 2.5rem;
+                color: #F8F8F8;
+            }
+        }
+
+        .header__cart {
+            display: none;
+        }
+
+        &__menu.active {
+            top: 0;
+        }
+    }
+}
+
 
 .top-img-absolute {
     img {
@@ -597,12 +722,12 @@ body {
         position: absolute;
         top: -5%;
         left: -12%;
-        z-index: -1;
     }
 
     &__upper-absolute-title,
     &__lowercase-absolute-title {
         font-family: "Bebas Neue";
+
         font-size: 288px;
         font-weight: 400;
         line-height: 346px;
@@ -682,11 +807,102 @@ body {
         margin-top: 15px;
     }
 
-    &__plus {
-        
+    &__plus-1,
+    &__plus-2,
+    &__plus-3,
+    &__plus-4,
+    &__plus-5 {
+        width: 51px;
+        height: 51px;
+        border-radius: 50%;
+        background-color: var(--my_Red);
+
+        color: #E0E0E0;
+        font-size: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+    }
+
+    &__plus-1 {
+        bottom: 156px;
+        left: 254px;
+    }
+
+    &__plus-2 {
+        bottom: 400px;
+        left: 547px;
+    }
+
+    &__plus-3 {
+        bottom: 105px;
+        left: 684px;
+    }
+
+    &__plus-4 {
+        bottom: 272px;
+        left: 835px;
+    }
+
+    &__plus-5 {
+        bottom: 373px;
+        left: 1116px;
+    }
+
+    .special__block-1,
+    .special__block-2,
+    .special__block-3,
+    .special__block-4,
+    .special__block-5 {
+        position: absolute;
+        display: none;
+        background-color: #00000069;
+
+        p {
+            width: 213px;
+            font-size: 16px;
+            line-height: 24px;
+            color: #F8F8F8;
+            margin: 35px;
+        }
+    }
+
+    // Перший зліва
+    .special__block-1 {
+        right: 1026px;
+        bottom: 237px;
+    }
+
+    .special__block-2 {
+        right: 874px;
+        bottom: 471px;
+    }
+
+    .special__block-3 {
+        right: 767px;
+        bottom: 19px;
+    }
+
+    .special__block-4 {
+        right: 440px;
+        bottom: 365px;
+    }
+
+    .special__block-5 {
+
+        right: 152px;
+        bottom: 130px;
     }
 }
+.special__wrapper.open {
+    display: block;
+}
 /* //Materials and Features */
+
+
+
 
 /* footer */
 .info {
@@ -719,7 +935,7 @@ body {
     }
 
     &__block {
-    text-align: center;
+        text-align: center;
     }
 
     &__social-networks {

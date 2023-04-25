@@ -124,7 +124,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #f8f8f8;
 }
 
 .main {
@@ -138,16 +137,11 @@ body {
   margin: 0 auto;
 }
 
-.navbar {
+.header {
+  width: 100%;
   margin-top: 20px;
 }
-.navbar__logo {
-  font-size: 2.25rem;
-  line-height: 2.6875rem;
-  letter-spacing: 0.06em;
-  color: #333333;
-}
-.navbar__content {
+.header__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,7 +152,24 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.navbar__list {
+.header__logo {
+  font-size: 2.25rem;
+  line-height: 2.6875rem;
+  letter-spacing: 0.06em;
+  color: #333333;
+}
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__list {
   width: 475px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,13 +178,16 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.navbar__item a {
+.header__link-cart {
+  display: none;
+}
+.header__link a {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
   color: var(--my_Grey-text-p);
 }
-.navbar__item a::after {
+.header__link a::after {
   content: "";
   display: block;
   width: 100%;
@@ -186,12 +200,12 @@ body {
       -ms-transform: scale(0);
           transform: scale(0);
 }
-.navbar__item a:hover::after {
+.header__link a:hover::after {
   -webkit-transform: scale(1.2);
       -ms-transform: scale(1.2);
           transform: scale(1.2);
 }
-.navbar__item a:active {
+.header__link a:active {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -199,8 +213,117 @@ body {
       -ms-transform: scale(1.2);
           transform: scale(1.2);
 }
-.navbar__cart {
+.header__cart {
   max-width: 1.875rem;
+}
+
+.header__burger {
+  display: none;
+}
+@media (max-width: 767px) {
+  .header body.lock {
+    overflow: hidden;
+  }
+  .header .header__body {
+    width: 100%;
+  }
+  .header__burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 3;
+    right: 0;
+    top: 0;
+  }
+  .header span {
+    position: absolute;
+    background-color: #000000;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    top: 8.5px;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:before, .header__burger:after {
+    content: "";
+    background-color: #000000;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .header__burger:before {
+    top: 0;
+  }
+  .header__burger::after {
+    bottom: 0;
+  }
+  .header__burger.active::before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 8.5px;
+  }
+  .header__burger.active::after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    bottom: 8.5px;
+  }
+  .header__burger.active span {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    overflow: auto;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: #03839E;
+    z-index: 2;
+  }
+  .header__list {
+    width: 180px;
+    height: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
+  }
+  .header__link-cart {
+    display: block;
+  }
+  .header__link a {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    color: #F8F8F8;
+  }
+  .header .header__cart {
+    display: none;
+  }
+  .header__menu.active {
+    top: 0;
+  }
 }
 
 .top-img-absolute img {
@@ -661,7 +784,6 @@ body {
   position: absolute;
   top: -5%;
   left: -12%;
-  z-index: -1;
 }
 .team__upper-absolute-title, .team__lowercase-absolute-title {
   font-family: "Bebas Neue";
@@ -728,6 +850,89 @@ body {
   color: #4f4f4f;
   margin-top: 15px;
 }
+.special__plus-1, .special__plus-2, .special__plus-3, .special__plus-4, .special__plus-5 {
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  background-color: var(--my_Red);
+  color: #E0E0E0;
+  font-size: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+}
+.special__plus-1 {
+  bottom: 156px;
+  left: 254px;
+}
+.special__plus-2 {
+  bottom: 400px;
+  left: 547px;
+}
+.special__plus-3 {
+  bottom: 105px;
+  left: 684px;
+}
+.special__plus-4 {
+  bottom: 272px;
+  left: 835px;
+}
+.special__plus-5 {
+  bottom: 373px;
+  left: 1116px;
+}
+.special .special__block-1,
+.special .special__block-2,
+.special .special__block-3,
+.special .special__block-4,
+.special .special__block-5 {
+  position: absolute;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4117647059);
+}
+.special .special__block-1 p,
+.special .special__block-2 p,
+.special .special__block-3 p,
+.special .special__block-4 p,
+.special .special__block-5 p {
+  width: 213px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #F8F8F8;
+  margin: 35px;
+}
+.special .special__block-1 {
+  right: 1026px;
+  bottom: 237px;
+}
+.special .special__block-2 {
+  right: 874px;
+  bottom: 471px;
+}
+.special .special__block-3 {
+  right: 767px;
+  bottom: 19px;
+}
+.special .special__block-4 {
+  right: 440px;
+  bottom: 365px;
+}
+.special .special__block-5 {
+  right: 152px;
+  bottom: 130px;
+}
+
+.special__wrapper.open {
+  display: block;
+}
+
 /* //Materials and Features */
 /* footer */
 .info {

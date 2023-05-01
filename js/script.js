@@ -1,3 +1,4 @@
+//burger-menu
 $(document).ready(function () {
     $('.header__burger').click(function (event) {
         $('.header__burger,.header__menu').toggleClass('active');
@@ -8,7 +9,8 @@ $(document).ready(function () {
 
 function toggleBlock(button, block) {
     button.addEventListener('click', () => {
-        const openBlocks = document.querySelectorAll('.special__block-1, .special__block-2, .special__block-3, .special__block-4, .special__block-5');
+        const openBlocks = document.querySelectorAll
+            ('.special__block-1, .special__block-2, .special__block-3, .special__block-4, .special__block-5');
         openBlocks.forEach(openBlock => {
             // перевіряємо, чи це відкритий блок, крім поточного блоку
             if (openBlock !== block && openBlock.style.display === 'block') {
@@ -32,7 +34,6 @@ function toggleBlock(button, block) {
         }
     });
 }
-
 
 const plus1 = document.querySelector('.special__plus-1');
 const block1 = document.querySelector('#block-1');
@@ -83,28 +84,3 @@ document.addEventListener('click', event => {
         });
     }
 });
-
-
-
-// document.addEventListener('click', event => {
-//     const clickedElement = event.target;
-//     if (clickedElement.matches('.special__plus-1, .special__plus-2, .special__plus-3, .special__plus-4, .special__plus-5')) {
-//         const button = clickedElement;
-//         const buttonId = button.getAttribute('data-block-id');
-//         const block = document.querySelector(`#block-${buttonId}`);
-//         toggleBlock(button, block);
-//     } else if (clickedElement.matches('.special__block-1, .special__block-2, .special__block-3, .special__block-4, .special__block-5')) {
-//         // Do nothing when clicking inside a special__block element
-//     } else {
-//         // Close any open blocks
-//         const openBlocks = document.querySelectorAll('.special__block-1, .special__block-2, .special__block-3, .special__block-4, .special__block-5');
-//         openBlocks.forEach(openBlock => {
-//             openBlock.style.display = 'none';
-//             const blockId = openBlock.getAttribute('id');
-//             const buttonId = blockId.replace('block-', '');
-//             const plusButton = document.querySelector(`.special__plus-${buttonId}`);
-//             plusButton.textContent = '+';
-//             plusButton.style.backgroundColor = 'var(--my_Red)';
-//         });
-//     }
-// });
